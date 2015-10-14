@@ -1,7 +1,7 @@
 import React from 'react';  
 import ReactDOM from 'react-dom';
-import ExampleComp from './components/example.comp.js';
-import styles from '../css/style.scss';
+import ExampleComp from './js/components/example.comp.js';
+import styles from './css/style.scss';
 
 let App = React.createClass({  
     render: function() {    	

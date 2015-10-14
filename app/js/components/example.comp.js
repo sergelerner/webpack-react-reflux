@@ -1,10 +1,12 @@
 import React from 'react';
+import webpackIcon from './../../assets/images/webpack.png';
 
 let Header = React.createClass({
 	render: function() {
 		return (
 			<div>
-				<img src="./assets/images/webpack.png"/>	
+				<img src={webpackIcon}/>	
+				<div className="icon"></div>	
 				<h2>Hello World!</h2>
 			</div>
 		)

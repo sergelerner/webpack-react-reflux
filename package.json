@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "app/js/app.js",
-  "scripts": {
-    "dev": "webpack-dev-server --hot --progress --colors --content-base app",
+  "scripts": {    
+    "dev": "webpack-dev-server --hot --devtool source-map --progress --colors --content-base app",
     "build": "webpack --progress --colors"
   },
   "author": "",

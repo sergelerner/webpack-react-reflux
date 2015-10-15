@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "app/js/app.js",
-  "scripts": {    
+  "scripts": {
     "dev": "webpack-dev-server --hot --devtool source-map --progress --colors --content-base app",
     "build": "webpack --progress --colors"
   },
@@ -16,6 +16,8 @@
     "extract-text-webpack-plugin": "^0.8.2",
     "file-loader": "^0.8.4",
     "html-webpack-plugin": "^1.6.2",
+    "jshint": "^2.8.0",
+    "jshint-loader": "^0.8.3",
     "node-sass": "^3.3.3",
     "path": "^0.12.7",
     "react": "^0.14.0",

@@ -7,7 +7,7 @@ let Header = React.createClass({
 			<div>
 				<img src={webpackIcon}/>	
 				<div className="icon"></div>	
-				<h2>Hello World!</h2>
+				<h2>Hello World!!!</h2>
 			</div>
 		)
 	}

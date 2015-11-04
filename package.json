@@ -4,7 +4,8 @@
   "description": "",
   "main": "app/js/app.js",
   "scripts": {
-    "dev": "webpack-dev-server --hot --inline --devtool source-map --progress --colors --content-base app",
+    "dev": "webpack-dev-server --hot --inline --devtool source-map --progress --colors --content-base development",
+    "pro": "webpack-dev-server --hot --inline --devtool source-map --progress --colors --content-base production",
     "build": "webpack --progress --colors"
   },
   "author": "",

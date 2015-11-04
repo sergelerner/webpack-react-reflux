@@ -4,14 +4,18 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {  
+
 	entry: [		
       	'webpack-dev-server/client?http://localhost:8080',
-      	path.resolve(__dirname, 'app/app.js')		
+      	path.resolve('./app/app.js')		
 	],
+
 	output: {
-		path: path.resolve(__dirname, './build'),
+		path: path.resolve('build'),
+		publicPath: '/public/', 
 		filename: "bundle.js"
 	},
+
 	module: {
 		preLoaders: [
 			//{ test: /\.js$/, exclude: /node_modules/, loader: 'jshint-loader' }
@@ -24,6 +28,7 @@ module.exports = {
 			{ test: /\.(jpe?g|gif|png)[\?]?.*$/, loader: 'file?name=assets/images/[name].[ext]'}
 		]
 	},
+
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(), 
 		new webpack.NoErrorsPlugin(),

@@ -2,6 +2,7 @@ var path              = require('path');
 var webpack           = require('webpack');  
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ReactToHtmlPlugin = require('react-to-html-webpack-plugin');
 
 module.exports = {  
 
@@ -44,8 +45,7 @@ module.exports = {
 
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(), 
-		new webpack.NoErrorsPlugin(),
-		new HtmlWebpackPlugin({ title: 'My App' }),
+		new webpack.NoErrorsPlugin(),		
 		new ExtractTextPlugin('./css/style.css', { allChunks: true })
 	]
 };

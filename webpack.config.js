@@ -21,22 +21,35 @@ module.exports = {
 			//{ test: /\.js$/, exclude: /node_modules/, loader: 'jshint-loader' }
 		],
 		loaders: [
-			{ test: /\.js?$/, loaders: ['react-hot', 'babel'], exclude: /node_modules/ },
-			{ test: /\.js$/, exclude: /node_modules/, loader: 'babel-loader'},
-			{ test: /\.scss$/, loader: ExtractTextPlugin.extract('css!sass') },
-			{ test: /\.(svg)[\?]?.*$/, loader: 'file?name=assets/svg/[name].[ext]'},
-			{ test: /\.(jpe?g|gif|png)[\?]?.*$/, loader: 'file?name=assets/images/[name].[ext]'}
+			{ 
+				test: /\.js?$/, 
+				loaders: ['react-hot', 'babel'], 
+				exclude: /node_modules/ 
+			},
+			{ 
+				test: /\.js$/, 
+				exclude: /node_modules/, 
+				loader: 'babel-loader'
+			},
+			{ 
+				test: /\.scss$/, 
+				loader: ExtractTextPlugin.extract('css!autoprefixer-loader!sass') 
+			},
+			{ 
+				test: /\.(svg)[\?]?.*$/, 
+				loader: 'file?name=assets/svg/[name].[ext]'
+			},
+			{ 
+				test: /\.(jpe?g|gif|png)[\?]?.*$/, 
+				loader: 'file?name=assets/images/[name].[ext]'
+			}
 		]
 	},
 
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(), 
 		new webpack.NoErrorsPlugin(),
-		new HtmlWebpackPlugin({
-			title: 'My App'
-		}),
-		new ExtractTextPlugin('./css/style.css', {
-			allChunks: true
-		})
+		new HtmlWebpackPlugin({ title: 'My App' }),
+		new ExtractTextPlugin('./css/style.css', { allChunks: true })
 	]
 };

@@ -1,13 +1,32 @@
-$background-color: #fed;
+@import "reset";
+@import "type";
+
+
+$background-color: #F0EAD8;
+
 
 body {
 	background: $background-color;
+	padding: 50px;
+}
+
+.hero-unit {
+	margin: auto;
+	text-align: center;
+}
+
+.title {
+	font-family: "nexa_scriptfree";
+	font-size: 120px;
+    font-weight: normal;
 }
 
 .icon {
+	display: block;
 	width: 200px;
-	height: 150px;
+	height: 100px;
 	background-image: url('../assets/svg/eyeglasses.svg');
-	box-shadow: 2px 2px 2px black;
-	border-radius: 4px;
+	background-repeat: no-repeat;
+    background-size: 200px;	
+    margin: auto;
 }

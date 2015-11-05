@@ -36,12 +36,8 @@ module.exports = {
 				loader: ExtractTextPlugin.extract('css!autoprefixer-loader!sass') 
 			},
 			{ 
-				test: /\.(svg)[\?]?.*$/, 
-				loader: 'file?name=assets/svg/[name].[ext]'
-			},
-			{ 
-				test: /\.(jpe?g|gif|png)[\?]?.*$/, 
-				loader: 'file?name=assets/images/[name].[ext]'
+				test: /\.(jpe?g|gif|png|ttf|eot|svg|woff|woff2)[\?]?.*$/, 
+				loader: 'url-loader?limit=10000?name=assets/images/[name].[ext]'
 			}
 		]
 	},
